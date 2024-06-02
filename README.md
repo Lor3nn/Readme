@@ -62,6 +62,49 @@ Optamos por usar Optamos por utilizar o MongoDB como nosso sistema de gerenciame
 
 - Para adicionar, atualizar, remover e buscar dados, usamos consultas especiais que funcionam bem com bancos de dados NoSQL. Essas consultas são um pouco diferentes das tradicionais, mas nos permitem fazer as mesmas coisas.
 
+## Documentação da API
+
+#### Retorna todas as tarefas
+
+```http
+  GET /
+```
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `` | `` |  |
+
+#### Salva uma tarefa
+
+```http
+  POST /save
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `text`      | `string` | **Obrigatório**. O título da tarefa que você quer |
+
+#### Atualiza uma tarefa
+
+```http
+  POST /update
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `_id`      | `string` | **Obrigatório**. O ID da tarefa que você quer |
+| `text`      | `string` | **Obrigatório**. O título da tarefa que você quer |
+
+#### Apaga uma tarefa
+
+```http
+  POST /delete
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `_id`      | `string` | **Obrigatório**. O ID da tarefa que você quer |
+
 #Segurança - 
 
 - Embora o MongoDB não tenha problemas comuns de segurança, como SQL Injection, ainda tomamos medidas para manter nossos dados seguros. 
